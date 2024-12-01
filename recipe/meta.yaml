@@ -1,5 +1,5 @@
 {% set name = "propcache" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/propcache-{{ version }}.tar.gz
-  sha256: df81779732feb9d01e5d513fad0122efb3d53bbc75f61b2a4f29a020bc985e70
+  sha256: 3f77ce728b19cb537714499928fe800c3dda29e8d9428778fc7c186da4c09a64
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   build:
