@@ -10,7 +10,7 @@ source:
   sha256: 40d980c33765359098837527e18eddefc9a24cea5b45e078a7f3bb5b032c6ecf
 
 build:
-  number: 1
+  number: 0
   noarch: python       # [use_noarch]
   track_features:      # [use_noarch]
     - propcache_no_compile  # [use_noarch]
