@@ -1,5 +1,5 @@
 {% set name = "propcache" %}
-{% set version = "0.3.1" %}
+{% set version = "0.5.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/propcache-{{ version }}.tar.gz
-  sha256: 40d980c33765359098837527e18eddefc9a24cea5b45e078a7f3bb5b032c6ecf
+  sha256: 01c4fc7480cd0598bb4b57022df55b9ca296da7fc5a8760bd8451a7e63a7d427
 
 build:
   number: 0
@@ -25,9 +25,6 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ stdlib("c") }}
     - {{ compiler('c') }}
-  host:
-    - python {{ python_min }}     # [use_noarch]
-    - python                      # [not use_noarch]
   host:
     - python {{ python_min }}     # [use_noarch]
     - python                      # [not use_noarch]
