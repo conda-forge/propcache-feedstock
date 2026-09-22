@@ -1,18 +1,18 @@
 {% set name = "propcache" %}
-{% set version = "0.5.2" %}
+{% set version = "0.5.4" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/propcache-{{ version }}.tar.gz
-  sha256: 01c4fc7480cd0598bb4b57022df55b9ca296da7fc5a8760bd8451a7e63a7d427
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/propcache-{{ version }}.tar.gz
+  sha256: ff6b113f50bc066a698db5d944d2c6dc7507168dd3341e255a8892fd0715a558
 
 build:
   number: 0
-  noarch: python       # [use_noarch]
-  track_features:      # [use_noarch]
+  noarch: python  # [use_noarch]
+  track_features:   # [use_noarch]
     - propcache_no_compile  # [use_noarch]
   script:
     - {{ PYTHON }} -m pip install . --no-deps -vv                                      # [not use_noarch]
